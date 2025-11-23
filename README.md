@@ -1,45 +1,45 @@
 Tourism AI Agent
 
-An intelligent, AI-powered tourism assistant that provides personalized destination recommendations, curated travel itineraries, and answers to travel-related queries.
-Built with Flask, optimized for production with Gunicorn, and deployed seamlessly on Railway.
+An AI-powered tourism assistant that delivers smart destination recommendations, curated itineraries, and travel-related insights.
+Built with a lightweight Flask backend and deployed in production using Gunicorn on Railway.
 
 🌐 Live Production URL
 🚀 https://tourism-ai-agent-production.up.railway.app
 ✨ Features
 
-AI-driven travel recommendations
+AI-driven travel destination recommendations
 
 Automated itinerary generation
 
 Location-based suggestions
 
-Lightweight and simple REST API
+Lightweight REST API architecture
 
-Fast Flask backend optimized for production
+Production-grade deployment using Gunicorn
 
-Deployed using Railway + Gunicorn
+Railway hosting with Nixpacks support
 
-🧰 Tech Stack
+🧰 Tech Stack & Dependencies
 
 Python
 
-Flask
+Flask 2.3.0
 
-Gunicorn
+Gunicorn (latest)
 
-Railway (Hosting)
+Requests 2.28.0
 
-dotenv
-
-requests
+python-dotenv 0.19.0
 
 📁 Project Structure
 .
-├── app.py
-├── requirements.txt
+├── DEPLOYMENT.md
 ├── Procfile
+├── app.py
 ├── railway.json
-└── README.md
+├── requirements.txt
+├── runtime.txt
+└── tourism_system.py
 
 ⚙️ Installation (Run Locally)
 1. Clone the repository
@@ -48,12 +48,12 @@ cd <your-repo>
 
 2. Create & activate a virtual environment
 python -m venv venv
-source venv/bin/activate          # Windows: venv\Scripts\activate
+source venv/bin/activate      # Windows: venv\Scripts\activate
 
 3. Install dependencies
 pip install -r requirements.txt
 
-4. Start the application
+4. Run the application
 python app.py
 
 
@@ -63,7 +63,7 @@ Local development URL:
 
 🚀 Deployment (Railway)
 
-This project uses Railway Nixpacks with a Gunicorn production server.
+This application is deployed using Railway Nixpacks with Gunicorn.
 
 Procfile
 web: gunicorn app:app --bind 0.0.0.0:${PORT}
@@ -106,14 +106,14 @@ Response
   ]
 }
 
-📌 Future Improvements
+📌 Future Enhancements
 
 Multilingual AI responses
 
-Google Maps API integration
+Google Maps & geocoding integration
 
-User authentication & saved itineraries
+User accounts & saved itineraries
 
-Web-based frontend UI
+Modern frontend UI
 
-Advanced analytics & insights
+Reporting & analytics dashboard
